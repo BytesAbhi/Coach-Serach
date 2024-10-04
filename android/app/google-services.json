@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "991067537705",
+    "project_id": "wesearch-c093d",
+    "storage_bucket": "wesearch-c093d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:991067537705:android:51824acaeb2dbe21ccb738",
+        "android_client_info": {
+          "package_name": "com.wesearch"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvvokei9R3hMgux6L7SDjDFRs2XVQEt-w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
