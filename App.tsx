@@ -5,13 +5,17 @@ import { createStackNavigator } from '@react-navigation/stack';
 // import Loginotpverify from './src/screens/auth/LoginOTPverify';
 // import LoginWithEmail from './src/screens/auth/LoginWithEmail';
 import Home from './src/screens/auth/Home';
+import OurCoaches from './src/screens/auth/OurCoaches';
+import Navigation from './src/components/Navigation';
 
 const Stack = createStackNavigator();
 
 const App = () => {
   return (
     <>
-  <Home/>
+    {/* <Navigation/> */}
+  {/* <Home/> */}
+  <OurCoaches/>
 
     </>
     // <NavigationContainer>

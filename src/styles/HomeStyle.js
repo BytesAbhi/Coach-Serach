@@ -99,21 +99,6 @@ const styles = StyleSheet.create({
     resizeMode: 'cover',
     zIndex: 0,
   },
-  // imageovelay: {
-  //     width: 0,
-  //     height: '0',
-  //     borderStartColor:"black",
-  //     position:'relative',
-  //     zIndex:1,
-  //   },
-  //   carouselText:{
-  //     color:'white',
-  //     position:'absolute',
-  //     bottom:10,
-  //     left:15,
-  //     fontSize:36,
-  //   },
-
   dotsContainer: {
     position: 'absolute',
     bottom: 10,
@@ -142,11 +127,12 @@ const styles = StyleSheet.create({
     paddingVertical: 15,
     paddingHorizontal: 10,
     width: width * 1,
+    // backgroundColor:"blue",
   },
   GuideHeading: {
     color: 'black',
     fontWeight: 'bold',
-    fontSize: 18,
+    fontSize: 20,
   },
   GuidePara: {
     color: '#5C5C5C',
@@ -235,14 +221,33 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: 'black',
   },
+
   // Coaches card section
+  CoachSection: {
+    flex: 1,
+    flexDirection: 'column',
+    paddingVertical: 15,
+    paddingHorizontal: 0,
+    width: width * 1,
+    // backgroundColor:"blue",
+  },
+  CoachHeading: {
+    color: 'black',
+    fontWeight: 'bold',
+    fontSize: 20,
+    paddingLeft: 10,
+  },
   CoachCards: {
+    // width:width * 1,
   },
   CoachCard: {
-    flex:0,
-    alignItems:'center',
-    justifyContent:'center',
-    padding: 15,
+    marginVertical: 20,
+    flex: 0,
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 20,
+    paddingHorizontal: 25,
+    gap: 5,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
@@ -252,22 +257,217 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 5,
     backgroundColor: 'white',
-    marginHorizontal:7.5,
-    borderRadius:10,
+    marginHorizontal: 7.5,
+    borderRadius: 10,
   },
   CoachCardImg: {
     height: 100,
     width: 100,
     borderRadius: 70,
   },
+  CoachName: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: 'black',
+  },
+  CoachGame: {
+    fontSize: 14,
+    fontWeight: 'regular',
+    color: '#727272',
+  },
   CoachText: {
-    color:'black'
+    fontSize: 14,
+    fontWeight: 'bold',
+    color: 'black',
   },
   CoachConnect: {
-    color:'black'
+    backgroundColor: '#0050C8',
+    paddingHorizontal: 17.5,
+    paddingVertical: 7.5,
+    borderRadius: 20,
   },
   CoachConnecttext: {
-    color:'black'
+    color: 'white',
+  },
+
+  // Finance Section Style
+  FinanceSection: {
+    width: width * 1,
+    flex: 0,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingHorizontal: 10,
+  },
+  FinanceHeading: {
+    flex: 0,
+    gap: 5,
+  },
+  FinanceText: {
+    fontSize: 16,
+    fontWeight: '700',
+    color: 'black',
+  },
+  FinanceStu: {
+    color: '#E1353C',
+  },
+  FinancePara: {
+    fontSize: 14,
+    fontWeight: '400',
+    color: '#515151',
+  },
+  FinanceImage: {
+    height: 100,
+    width: 100,
+  },
+
+  // Our Students
+  StuCards: {
+    flex: 0,
+    width: width * 1,
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    backgroundColor: 'white',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: -5,
+    },
+    shadowOpacity: 0.5,
+    shadowRadius: 10,
+    elevation: 5,
+  },
+
+  StuCard: {
+    marginVertical: 0,
+    flex: 0,
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 20,
+    paddingHorizontal: 10,
+    gap: 0,
+    borderRadius: 10,
+  },
+  StuCardImgShad: {
+    flex: 0,
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: 132,
+    width: 116,
+    borderRadius: 10,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.3,
+    shadowRadius: 4,
+    elevation: 4,
+  },
+  StuCardImg: {
+    height: 132,
+    width: 116,
+    borderRadius: 10,
+  },
+  StuName: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: 'black',
+    marginTop: 15,
+    marginBottom: 2.5,
+  },
+  StuGame: {
+    fontSize: 14,
+    fontWeight: 'regular',
+    color: '#727272',
+  },
+
+  // Coach card Styles
+
+  CoachListSection: {
+    paddingHorizontal: 0,
+    paddingTop: 25,
+    gap: 15,
+  },
+  CoachSectionHead: {
+    color: 'black',
+    fontSize: 18,
+    fontWeight: 'bold',
+    paddingLeft:10,
+  },
+
+
+  CoachCards: {},
+  CoachDetails: {
+    flex: 0,
+    flexDirection: 'row',
+    gap: 20,
+  },
+  CoachImgSection: {
+    position: 'relative',
+  },
+  CoachImage: {
+    height: 160,
+    aspectRatio: 4 / 5,
+    borderRadius: 10,
+  },
+  Coachrating: {
+    gap: 5,
+    flex: 0,
+    left: 28,
+    bottom: -10,
+    borderRadius: 15,
+    paddingVertical: 5,
+    flexDirection: 'row',
+    position: 'absolute',
+    paddingHorizontal: 10,
+    backgroundColor: 'white',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.3,
+    shadowRadius: 4,
+    elevation: 4,
+  },
+  RatingStar: {
+    width: 20,
+    aspectRatio: 1,
+  },
+  RatingNumber: {
+    fontSize: 16,
+    color: 'black',
+  },
+
+  // Coach card Buttons
+  CoachButtons: {
+    gap: 5,
+    elevation: 4,
+    borderRadius: 25,
+    shadowRadius: 4,
+    shadowOpacity: 0.3,
+    marginVertical: 10,
+    paddingVertical: 10,
+    shadowColor: '#000',
+    alignItems: 'center',
+    flexDirection: 'row',
+    marginHorizontal: 5,
+    paddingHorizontal: 20,
+    backgroundColor: 'white',
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+  },
+  CoachButtIcon: {
+    width: 22.5,
+    aspectRatio: 1,
+  },
+  buttTextCoach: {
+    color: '#157B11',
+    fontSize: 16,
+    fontWeight: '400',
   },
 });
 

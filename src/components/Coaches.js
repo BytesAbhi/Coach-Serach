@@ -1,4 +1,3 @@
-// import {StyleSheet, Text, View, Image} from 'react-native';
 import {
   View,
   Text,
@@ -17,7 +16,7 @@ const Coaches = () => {
       id: '1',
       source: require('../assets/images/Coach1.png'),
       Name: 'Leo',
-      Game: 'Football',
+      Game: 'Foot ball',
     },
     {
       id: '2',
@@ -55,8 +54,8 @@ const Coaches = () => {
   const cardWidth = width * 0.4;
 
   return (
-    <View style={styles.GuideSection}>
-      <Text style={styles.GuideHeading}>Recomended Coaches</Text>
+    <View style={styles.CoachSection}>
+      <Text style={styles.CoachHeading}>Recomended Coaches</Text>
       <View style={styles.CoachCards}>
         <FlatList
           data={coaches}
@@ -69,8 +68,8 @@ const Coaches = () => {
           renderItem={({item}) => (
             <View style={styles.CoachCard}>
               <Image source={item.source} style={styles.CoachCardImg} />
-              <Text style={styles.CoachText}>{item.Name}</Text>
-              <Text style={styles.CoachText}>{item.Game}</Text>
+              <Text style={styles.CoachName}>{item.Name}</Text>
+              <Text style={styles.CoachGame}>{item.Game}</Text>
               <TouchableOpacity  style={styles.CoachConnect}>
                 <Text  style={styles.CoachConnecttext}>Connect</Text>
               </TouchableOpacity>
