@@ -14,8 +14,8 @@ const App = () => {
   return (
     <>
     {/* <Navigation/> */}
-  {/* <Home/> */}
-  <OurCoaches/>
+  <Home/>
+  {/* <OurCoaches/> */}
 
     </>
     // <NavigationContainer>
