@@ -76,6 +76,38 @@ const styles = StyleSheet.create({
     right: 5,
     borderRadius: 50,
   },
+  modalContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)', // Semi-transparent background
+  },
+  modalContent: {
+    width: '80%',
+    padding: 20,
+    backgroundColor: 'white',
+    borderRadius: 10,
+    elevation: 5,
+  },
+  modalTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 10,
+  },
+  notificationText: {
+    marginVertical: 5,
+  },
+  closeButton: {
+    marginTop: 10,
+    padding: 10,
+    backgroundColor: '#386BF6',
+    borderRadius: 5,
+    alignItems: 'center',
+  },
+  closeButtonText: {
+    color: 'white',
+    fontWeight: 'bold',
+  },
   //   this section is for scrolling images
 
   carouselContainer: {
@@ -222,14 +254,14 @@ const styles = StyleSheet.create({
     color: 'black',
   },
 
-  // Coaches card section
+  
   CoachSection: {
     flex: 1,
     flexDirection: 'column',
     paddingVertical: 15,
     paddingHorizontal: 0,
     width: width * 1,
-    // backgroundColor:"blue",
+  
   },
   CoachHeading: {
     color: 'black',
@@ -386,7 +418,7 @@ const styles = StyleSheet.create({
 
   CoachListSection: {
     paddingHorizontal: 0,
-    paddingTop: 25,
+    paddingTop: 15,
     gap: 15,
   },
   CoachSectionHead: {

@@ -283,39 +283,6 @@ const LoginScreen = () => {
           </View>
         </View>
       </Modal>
-
-      {/* <Modal
-        animationType="slide"
-        transparent={true}
-        visible={modalVisible}
-        onRequestClose={() => setModalVisible(false)}>
-        <View style={styles.modalContainer}>
-          <View style={styles.modalContent}>
-            <FlatList
-              data={countryOptions}
-              keyExtractor={item => item.code}
-              renderItem={({item}) => (
-                <TouchableOpacity
-                  style={styles.countryOption}
-                  onPress={() => {
-                    setSelectedCountry(item);
-                    setModalVisible(false);
-                  }}>
-                  <Image source={{uri: item.flag}} style={styles.flag} />
-                  <Text style={styles.countryName}>
-                    {item.name} ({item.code})
-                  </Text>
-                </TouchableOpacity>
-              )}
-            />
-            <TouchableOpacity
-              style={styles.closeButton}
-              onPress={() => setModalVisible(false)}>
-              <Text style={styles.closeButtonText}>Close</Text>
-            </TouchableOpacity>
-          </View>
-        </View>
-      </Modal> */}
     </View>
   );
 };

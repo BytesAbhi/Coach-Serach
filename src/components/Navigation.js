@@ -1,23 +1,29 @@
-import { StyleSheet, Text, TouchableOpacity, View, Animated, Dimensions } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View, Dimensions } from 'react-native';
 import React, { useState } from 'react';
-import Message from '../assets/Svgs/Message';
-import Home from '../assets/Svgs/Home';
-import Search from '../assets/Svgs/Search';
-import Profile from '../assets/Svgs/Profile';
+import Message from '../assets/Svgs/MessageIcon';
+import Home from '../assets/Svgs/HomeIcon';
+import Search from '../assets/Svgs/SearchIcon';
+import Profile from '../assets/Svgs/ProfileIcon';
+import { useNavigation } from '@react-navigation/native';
 
-const {width, height} = Dimensions.get('window');
-
+const { width } = Dimensions.get('window');
 
 const Navigation = () => {
   const [activeTab, setActiveTab] = useState('Home'); // Default active tab is 'Home'
+  const navigation = useNavigation();
 
-  // Define icons array
+  // Define icons array with corresponding screen names
   const icons = [
-    { id: 1, name: 'Message', Component: Message, label: 'Messages' },
-    { id: 2, name: 'Search', Component: Search, label: 'Search' },
     { id: 3, name: 'Home', Component: Home, label: 'Home' },
-    { id: 4, name: 'Profile', Component: Profile, label: 'Profile' },
+    { id: 2, name: 'OurCoaches', Component: Search, label: 'Search' },
+    { id: 1, name: 'Chat', Component: Message, label: 'Chat' },
+    { id: 4, name: 'User', Component: Profile, label: 'Profile' },
   ];
+
+  const handlePress = (name) => {
+    setActiveTab(name); // Set the active tab
+    navigation.navigate(name); // Navigate to the corresponding screen
+  };
 
   return (
     <View style={styles.containerjh}>
@@ -29,11 +35,13 @@ const Navigation = () => {
         return (
           <TouchableOpacity
             key={id}
-            style={[styles.iconContainer, isActive && styles.activeIconContainer]} // Move up when active
-            onPress={() => setActiveTab(name)}
+            style={styles.iconContainer}
+            onPress={() => handlePress(name)} // Call handlePress on icon press
           >
             <Component color={iconColor} height={30} width={30} />
-            {isActive && <Text style={[styles.iconLabel, { color: textColor }]}>{label}</Text>}
+            <Text style={[styles.iconLabel, { color: textColor }]}>
+              {label}
+            </Text>
           </TouchableOpacity>
         );
       })}
@@ -44,19 +52,13 @@ const Navigation = () => {
 const styles = StyleSheet.create({
   containerjh: {
     flexDirection: 'row',
-    // backgroundColor: 'black',
-    justifyContent: 'space-around', 
-    alignItems: 'flex-end',         
+    justifyContent: 'space-around',
+    alignItems: 'flex-end',
     paddingVertical: 10,
-    width:width * 1,
+    width: width,
   },
   iconContainer: {
     alignItems: 'center',
-    position: 'relative',
-    transform: [{ translateY: 0 }], 
-  },
-  activeIconContainer: {
-    transform: [{ translateY: -10 }], // Move icon up by 10px when active
   },
   iconLabel: {
     marginTop: 5,

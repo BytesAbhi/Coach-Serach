@@ -150,7 +150,7 @@ const Home = () => {
           </View>
         }
       />
-      <Navigation/>
+      {/* <Navigation/> */}
     </View>
   );
 };

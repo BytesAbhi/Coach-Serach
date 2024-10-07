@@ -57,6 +57,7 @@ const Coaches = () => {
     <View style={styles.CoachSection}>
       <Text style={styles.CoachHeading}>Recomended Coaches</Text>
       <View style={styles.CoachCards}>
+
         <FlatList
           data={coaches}
           horizontal
@@ -64,7 +65,7 @@ const Coaches = () => {
           showsHorizontalScrollIndicator={false}
           snapToAlignment="start"
           decelerationRate="fast"
-          snapToInterval={cardWidth} // Makes sure cards snap to position
+          snapToInterval={cardWidth} 
           renderItem={({item}) => (
             <View style={styles.CoachCard}>
               <Image source={item.source} style={styles.CoachCardImg} />

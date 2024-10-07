@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 import styles from '../../styles/OurCoaches';
 import CoachCard from '../../components/CoachCard';
-import Navigation from '../../components/Navigation';
+
 
 const coachDetails = [
   {
@@ -524,8 +524,7 @@ const OurCoaches = () => {
               paddingHorizontal: 15,
               borderStyle: 'dashed',
               borderColor: '#CCCCCC',
-
-              paddingBottom: index === filteredData.length - 1 ? 75 : 15,
+              paddingBottom: index === filteredData.length - 1 ? 0 : 15,
             }}>
             <CoachCard coach={item} />
           </View>
@@ -540,9 +539,9 @@ const OurCoaches = () => {
         // )}
       />
 
-      <View style={styles.navigationContainer}>
-        <Navigation />
-      </View>
+      {/* <View style={styles.navigationContainer}> */}
+        {/* <Navigation /> */}
+      {/* </View> */}
     </View>
   );
 };
