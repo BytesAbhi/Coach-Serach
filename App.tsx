@@ -5,9 +5,11 @@ import LoginScreen from './src/screens/auth/LoginScreen';
 import Loginotpverify from './src/screens/auth/LoginOTPverify';
 import LoginWithEmail from './src/screens/auth/LoginWithEmail';
 import Home from './src/screens/auth/Home';
-import User from './src/screens/auth/profile/User';
+import User from './src/screens/profile/User';
 import OurCoaches from './src/screens/auth/OurCoaches';
+import Message from './src/screens/Message/Message';
 import Navigation from './src/components/Navigation';
+
 
 const Stack = createStackNavigator();
 
@@ -34,6 +36,11 @@ const App = () => {
         <Stack.Screen
           name="OurCoaches"
           component={OurCoaches}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Chat"
+          component={Message}
           options={{ headerShown: false }}
         />
         {/* <Stack.Screen

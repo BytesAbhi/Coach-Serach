@@ -1,4 +1,5 @@
 import React, {useRef, useState, useEffect, useCallback} from 'react';
+import {useNavigation} from '@react-navigation/native';
 import {
   Animated,
   FlatList,
@@ -11,7 +12,6 @@ import {
 } from 'react-native';
 import styles from '../../styles/OurCoaches';
 import CoachCard from '../../components/CoachCard';
-
 
 const coachDetails = [
   {
@@ -382,7 +382,7 @@ const OurCoaches = () => {
   const [selectedLanguage, setSelectedLanguage] = useState('');
   const [filteredData, setFilteredData] = useState(coachDetails);
   const [isFilterVisible, setIsFilterVisible] = useState(true);
-
+  const navigation = useNavigation();
   const flatListRef = useRef(null);
   const filterAnim = useRef(new Animated.Value(1)).current;
 
@@ -428,6 +428,10 @@ const OurCoaches = () => {
     flatListRef.current.scrollToOffset({animated: true, offset: 0});
   };
 
+  const handleBackPress = () => {
+    navigation.goBack();
+  };
+
   const handleScroll = event => {
     const offsetY = event.nativeEvent.contentOffset.y;
 
@@ -451,12 +455,13 @@ const OurCoaches = () => {
   return (
     <View style={{backgroundColor: 'white', flex: 2}}>
       <View style={styles.header}>
-        <TouchableOpacity style={styles.backButtonContainer}>
+        <TouchableOpacity style={styles.backButtonContainer} onPress={handleBackPress}>
           <Image
             source={require('../../assets/images/LeftArrow.png')}
             style={styles.backButtonIcon}
+            
           />
-          <Text style={styles.headerTitle}>Our Coaches</Text>
+        <Text style={styles.headerTitle}>Our Coaches</Text>
         </TouchableOpacity>
         <TouchableOpacity>
           <Image
@@ -540,7 +545,7 @@ const OurCoaches = () => {
       />
 
       {/* <View style={styles.navigationContainer}> */}
-        {/* <Navigation /> */}
+      {/* <Navigation /> */}
       {/* </View> */}
     </View>
   );

@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'flex-start',
-    backgroundColor: 'white',
+    backgroundColor: '',
   },
   Userprofile: {
     flex: 0,
@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
     justifyContent: 'space-between',
     flexDirection: 'row',
-    gap: 10,
+    // gap: 10,
     borderColor: '#808080',
     borderBottomWidth: 1,
     paddingHorizontal: 10,
